@@ -2,9 +2,9 @@
 
 ## This homework repo has ✨TWO✨ assignments!! Make sure you do both of them!
 
-### Part 1: [Lord of the Rings DOM manipulation](./dom/README.md)
+### Part 1: [Lord of the Rings DOM manipulation](./dom/)
 
-### Part 2: [GA Press Release CSS practice 💪](./press-release/README.md)
+### Part 2: [GA Press Release CSS practice 💪](./press-release/)
 
 ## You'll need to:
 
