@@ -10,6 +10,7 @@
 
 - Follow the instructions in **both README files**
 - Submit **only one issue ticket**
+- Read the [refresher on CSS specificity](https://css-tricks.com/specifics-on-css-specificity/) 🤓
 
 ## Your homework submission should include:
 
