@@ -10,6 +10,14 @@ We are going to take a trip from the Shire, through Rivendell, across Middle
 Earth, and into the heart of Mordor itself, Mount Doom. Pack up, because we're
 going on an adventure.
 
+### You may need...
+
+Check out these three W3Schools articles:
+
+- [createElement](https://www.w3schools.com/jsref/met_document_createelement.asp)
+- [appendChild](https://www.w3schools.com/jsref/met_node_appendchild.asp)
+- [setAttribute](https://www.w3schools.com/jsref/met_element_setattribute.asp)
+
 ### Step 1-13
 
 Observe the 13 chapters that have been included in the starter code (app.js). Each
