@@ -11,6 +11,7 @@
 - Follow the instructions in **both README files**
 - Submit **only one issue ticket**
 - Read the [refresher on CSS specificity](https://css-tricks.com/specifics-on-css-specificity/) 🤓
+- Read the [Eloquent Javascript chapter on the DOM](http://eloquentjavascript.net/13_dom.html) 🤓
 
 ## Your homework submission should include:
 
