@@ -10,7 +10,9 @@
 
 - Follow the instructions in **both README files**
 - Submit **only one issue ticket**
-- Read the [refresher on CSS specificity](https://css-tricks.com/specifics-on-css-specificity/) 🤓
+- Read the [MDN documentation on CSS specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) 🤓
+    - PAY CLOSE ATTENTION to the rules of thumb about `!important`!! (i.e. DON'T USE IT except in maybe one or two VERY SPECIFIC use cases.)
+    - You can also play around with the [specificity calculator](https://specificity.keegan.st/)
 - Read the [Eloquent Javascript chapter on the DOM](http://eloquentjavascript.net/13_dom.html) 🤓
 
 ## Your homework submission should include:

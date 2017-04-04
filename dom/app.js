@@ -25,9 +25,9 @@ const baddies = [
 ];
 
 const lands = [
-  'The Shire',
-  'Rivendell',
-  'Mordor'
+  'the-shire',
+  'rivendell',
+  'mordor'
 ];
 
 // ====================================
@@ -43,18 +43,18 @@ function makeMiddleEarth() {
   // add each land to the section as article tags-- try using a loop
   document.body.appendChild(middleEarth);
 
-  for(let land of lands){
-    // console.log(land);
+  for (let i = 0; i < lands.length; i++) {
+    // console.log(lands[i]);
     let place = document.createElement('article');
     // console.log(place);
     // assign the id of the corresponding article tag as the name of the land
-    place.setAttribute('id', land);
+    place.setAttribute('id', lands[i]);
     // console.log(place);
     // inside each article tag include an h1 with the name of the land
     middleEarth.appendChild(place);
     let nameOfLand = document.createElement('h1');
     // console.log(nameOfLand);
-    nameOfLand.innerHTML = land;
+    nameOfLand.innerHTML = lands[i];
     // console.log(nameOfLand);
     place.appendChild(nameOfLand);
   }
