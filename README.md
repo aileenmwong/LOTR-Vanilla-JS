@@ -1,27 +1,53 @@
-#  HOMEWORK: Press Release and DOM Manipulation
+# Trip To MorDOMr
 
-## This homework repo has ✨TWO✨ assignments!! Make sure you do both of them!
+![Precious](https://media0.giphy.com/media/kThjGisz65Jeg/200_s.gif)
+---------
+#### Learning Objectives
 
-### Part 1: [Lord of the Rings DOM manipulation](./dom/)
+- Practice using 'Vanilla' JavaScript to manipulate the DOM
 
-### Part 2: [GA Press Release CSS practice 💪](./press-release/)
+We are going to take a trip from the Shire, through Rivendell, across Middle
+Earth, and into the heart of Mordor itself, Mount Doom. Pack up, because we're
+going on an adventure.
 
-## You'll need to:
+### You may need...
 
-- Follow the instructions in **both README files**
-- Submit **only one issue ticket**
-- Read the [MDN documentation on CSS specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) 🤓
-    - PAY CLOSE ATTENTION to the rules of thumb about `!important`!! (i.e. DON'T USE IT except in maybe one or two VERY SPECIFIC use cases.)
-    - You can also play around with the [specificity calculator](https://specificity.keegan.st/)
-- Read the [Eloquent Javascript chapter on the DOM](http://eloquentjavascript.net/13_dom.html) 🤓
+Check out these three W3Schools articles:
 
-## Your homework submission should include:
+- [createElement](https://www.w3schools.com/jsref/met_document_createelement.asp)
+- [appendChild](https://www.w3schools.com/jsref/met_node_appendchild.asp)
+- [setAttribute](https://www.w3schools.com/jsref/met_element_setattribute.asp)
 
-- An issue ticket created on the repo `ada-students` [here](https://git.generalassemb.ly/nyc-wdi-ada/ada-students/issues/new)
-- A link to your fork of this repository
-- A link to your BitBalloon upload of the GA press release (see the press release readme for more info!!!)
-- Completion, comfort, wins, losses, questions... you know the drill.
+### Step 1-13
 
-## This homework is due 🚨 10PM on WEDNESDAY NIGHT!! 🚨
+Observe the 13 chapters that have been included in the starter code (app.js). Each
+chapter has a button with a click handler in the html file, and an associated javascript function in app.js. Your job is to fill in the right code into the JS functions.
 
-Go forth and be awesome!!!! 💪💪
+Remember you can check your DOM tree in the Elements tab in Chrome Console.
+
+#### **Workflow**
+
+Tackle this problem one function from start to finish at a time.
+
+* Write a trivial console.log inside the function to check that the event
+  listener works when you click the right button
+* Write the correct DOM manipulatory code inside the function and check that it
+  works
+
+**Each function depends on the previous ones, so make sure your function works
+before moving on to the next one!**
+
+Every time you refresh the page, you will have to click the buttons one by one
+in order from the beginning to operate your application. (If you really don't want
+the popups after you've completed a step, you can check to disable each popup and
+speed up the process of debugging).
+
+#### **Submission**
+
+Create a pull request once you are finished.
+
+#### **Suggested Readings**
+
+[MDN DOM events reference](https://developer.mozilla.org/en-US/docs/Web/Events)
+
+[Eloquent JavaScript - chapter 13](http://eloquentjavascript.net/13_dom.html)
