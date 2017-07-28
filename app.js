@@ -1,3 +1,4 @@
+//worked with Liana and Sarah on homework
 // ==============================
 //       Characters and places
 // ==============================
@@ -36,7 +37,7 @@ const lands = [
 
 function makeMiddleEarth() {
   console.log('Trying to make middle earth.');
-  // create a section tag with an id of middle-earth
+  // create a section tag with an id of middle-earth.
   let middleEarth = document.createElement('section');
   // console.log(middleEarth);
   middleEarth.setAttribute('id', 'middle-earth');
@@ -63,36 +64,163 @@ function makeMiddleEarth() {
 
 function makeHobbits() {
   console.log('Make hobbits');
+  //creating a ul for hobbits
+  let characters = document.createElement('ul');
+  //create a variable to sort the hobbits
+  const sortedHobbits = hobbits;
+  //sort hobbits using .sort()
+  sortedHobbits.sort();
+  //create a loop to go through the hobbits and put them in a list
+  for (let i = 0; i < sortedHobbits.length; i++) {
+    //create li elements
+    let characterItems = document.createElement('li');
+    // give each hobbit a class of "hobbit"
+    characterItems.setAttribute('class', 'hobbit');
+    //change the text of each LI to the current hobbit
+    characterItems.innerHTML = sortedHobbits[i];
+    //add each li of hobbits to the ul
+    characters.appendChild(characterItems);
+  }
+  //append the ul to the shire
+  document.querySelector('#the-shire').appendChild(characters);
+}
+  //INSTRUCTIONS
   // display an unordered list of hobbits in the shire
   // give each hobbit a class of "hobbit"
   // list the hobbits alphabetically.  Maybe use the .sort() method.
-}
 
 function keepItSecretKeepItSafe() {
-  // create an empty div with an id of 'the-ring' and innerHTML of "The ring"
+  console.log('Save the Ring')
+  //create a div for the ring
+  let ring = document.createElement('div');
+  //set the id of 'the-ring' and set the innerHTML to 'The Ring'
+  ring.setAttribute('id', 'the-ring')
+  //set the text of the ring to 'The Ring'
+  ring.innerHTML = 'The Ring';
+  //select Frodo in the array
+  const allHobbits = document.querySelectorAll('.hobbit')[0]
   // add the ring as a child of Frodo
+  allHobbits.appendChild(ring);
+
 }
 
 function makeBaddies() {
+  console.log('Making Baddies')
+  //created an unordered list of baddies
+  let badBoys = document.createElement('ul');
+  //create a loop to go through baddies and give them a class of baddy
+  for (let i = 0; i < baddies.length; i++) {
+    //create li for each baddie
+    let badBoyNames = document.createElement('li');
+    //set the class of the baddies to baddy
+    badBoyNames.setAttribute('class', 'baddy');
+    //change the name of each baddie to the proper name
+    badBoyNames.innerHTML = baddies[i];
+    //add each li of baddies to the ul
+    badBoys.appendChild(badBoyNames);
+    }
+    //append the ul to mordor
+  document.querySelector('#mordor').appendChild(badBoys);
+
+  //INSTRUCTIONS
   // display an unordered list of baddies in Mordor
   // give each of the baddies a class of "baddy"
+
 }
 
 function makeBuddies() {
+  console.log('Making Buddies')
+  //create an aside tag
+  let friends = document.createElement('aside');
+  //append aside tag below mordor
+  document.querySelector('#mordor').appendChild(friends);
+  //create a loop to go through buddies and give them a class of buddy
+  for (let i = 0; i < buddies.length; i++) {
+    //create a li for each buddy
+    let buddyNames = document.createElement('li');
+    //set the class of buddies to 'buddy'
+    buddyNames.setAttribute('class', 'buddy');
+    //change the name of each buddy to the proper name
+    buddyNames.innerHTML = buddies[i];
+    //add the li of buddies to the ul
+    friends.appendChild(buddyNames);
+  }
+  //append the ul to mordor
+  document.querySelector('#mordor').appendChild(friends);
+
+  //INSTRUCTIONS
   // create an aside tag and append it below mordor
   // display an unordered list of buddies in the aside
   // give each of the buddies a class of "buddy"
 }
 
 function leaveTheShire() {
+  console.log('Leaving the Shire');
+  //make a new ul for the Rivendell
+  const newHome = document.createElement('ul');
+  //call all the cities where hobbits could be
+  const cities = document.querySelectorAll('h1');
+  //pick the city and append the empty newHome to Rivendell
+  cities[2].appendChild(newHome);
+  //select all the hobbits within The Shire
+  const migratingHobbits = document.querySelectorAll('.hobbit');
+  //loop through all the hobbits in the shire to grab them
+  for (let i=0; i < migratingHobbits.length; i++) {
+    //moving the migrating hobbits to their newHome
+    newHome.appendChild(migratingHobbits[i]);
+  }
+  //INSTRUCTIONS
   // grab the hobbits and move them to Rivendell
 }
 
 function beautifulStranger() {
+  console.log ('Beatiful Stranger')
+  //create a variable called strider
+  const strider = document.querySelectorAll('.buddy')[3];
+  //change strider to Aragorn
+  strider.innerHTML = 'Aragorn';
+
+  //INSTRUCTIONS
   // change the buddy 'Strider' node to "Aragorn"
 }
 
 function forgeTheFellowShip() {
+  console.log('Forge the Fellowship');
+  //create a new div for the fellowship
+  const fellowshipFriends = document.createElement('div');
+  //set the id of the new div to 'the-fellowship'
+  fellowshipFriends.setAttribute('id', 'the-fellowship');
+  //create an h1 within the fellowship of friends
+  const nameOfFellowship = document.createElement('h1');
+  //attach the h1 to the div of Fellowship of Friends
+  fellowshipFriends.appendChild(nameOfFellowship);
+  //add text to the h1
+  nameOfFellowship.innerHTML = 'The Fellowship';
+  //call all the cities where the Fellowship could be
+  const fellowshipCities = document.querySelectorAll('h1');
+  //pick the city and append the empty fellowship to Rivendell
+  fellowshipCities[2].appendChild(fellowshipFriends);
+
+  //select all the hobbits
+  const fellowshipHobbits = document.querySelectorAll('.hobbit');
+  //loop through all the hobbits in the shire to grab them
+  for (let i=0; i < fellowshipHobbits.length; i++) {
+  //moving the fellowship hobbits to their new fellowship
+    fellowshipFriends.appendChild(fellowshipHobbits[i]);
+    //alerts each hobbit joined the party
+    alert (fellowshipHobbits[i].innerHTML + ' has joined your party');
+  }
+  //select all the buddies
+  const fellowshipBuddies = document.querySelectorAll('.buddy');
+  //loop through all the buddies to grab them
+  for (let i=0; i < fellowshipBuddies.length; i++) {
+    //moving the fellowship buddies to their new fellowship
+    fellowshipFriends.appendChild(fellowshipBuddies[i]);
+    //alerts each buddy joined the party
+    alert (fellowshipBuddies[i].innerHTML + ' has joined your party');
+  }
+
+  //INSTRUCTIONS
   // move the hobbits and the buddies to Rivendell
   // create a new div called 'the-fellowship'
   // add an h1 with the text 'The Fellowship' to this new div
@@ -101,6 +229,13 @@ function forgeTheFellowShip() {
 }
 
 function theBalrog() {
+  console.log('The Balrog')
+  //look for the Gandalf in The Fellowship
+  const gandalfName = document.querySelectorAll('.buddy')[0];
+  //rename Gandalf
+  gandalfName.innerHTML = 'Gandalf the White';
+
+  //INSTRUCTIONS
   // change the inner HTML of the 'Gandalf' node to 'Gandalf the White'
   // add a class "the-white" to this element
   // in the style.css file, add a css rule for the class "the-white"
@@ -153,3 +288,4 @@ window.onload = function() {
   document.querySelector('#b13').addEventListener('click', thereAndBackAgain);
 
 };
+
