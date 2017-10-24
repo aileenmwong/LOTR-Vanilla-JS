@@ -108,6 +108,7 @@ function makeBaddies() {
   console.log('Making Baddies')
   //created an unordered list of baddies
   let badBoys = document.createElement('ul');
+  badBoys.setAttribute('class', 'badGuys');
   //create a loop to go through baddies and give them a class of baddy
   for (let i = 0; i < baddies.length; i++) {
     //create li for each baddie
@@ -208,7 +209,7 @@ function forgeTheFellowShip() {
   //moving the fellowship hobbits to their new fellowship
     fellowshipFriends.appendChild(fellowshipHobbits[i]);
     //alerts each hobbit joined the party
-    alert (fellowshipHobbits[i].innerHTML + ' has joined your party');
+    //alert (fellowshipHobbits[i].innerHTML + ' has joined your party');
   }
   //select all the buddies
   const fellowshipBuddies = document.querySelectorAll('.buddy');
@@ -217,7 +218,7 @@ function forgeTheFellowShip() {
     //moving the fellowship buddies to their new fellowship
     fellowshipFriends.appendChild(fellowshipBuddies[i]);
     //alerts each buddy joined the party
-    alert (fellowshipBuddies[i].innerHTML + ' has joined your party');
+    //alert (fellowshipBuddies[i].innerHTML + ' has joined your party');
   }
 
   //INSTRUCTIONS
@@ -229,11 +230,17 @@ function forgeTheFellowShip() {
 }
 
 function theBalrog() {
-  console.log('The Balrog')
+  console.log('The Balrog');
   //look for the Gandalf in The Fellowship
   const gandalfName = document.querySelectorAll('.buddy')[0];
   //rename Gandalf
   gandalfName.innerHTML = 'Gandalf the White';
+  //add class of 'the white' to the element
+  gandalfName.setAttribute('class', 'the-white');
+  // in the style.css file, add a css rule for the class "the-white" have a white background and a grey border
+  document.querySelector('.the-white').style.backgroundColor = 'white';
+  document.querySelector('.the-white').style.borderColor = 'gray';
+
 
   //INSTRUCTIONS
   // change the inner HTML of the 'Gandalf' node to 'Gandalf the White'
@@ -243,6 +250,19 @@ function theBalrog() {
 }
 
 function hornOfGondor() {
+  console.log('Horn of Gondor');
+  // pop up an alert that the horn of gondor has been blown
+  //alert('The horn of Gondor has been blown! Boromir\'s been killed by the Uruk-hai!');
+  // select Boromir
+  const byeBoromir = document.querySelectorAll('.buddy')[3];
+  // put a linethrough on boromir's name
+  byeBoromir.style.textDecoration = 'line-through';
+  // Remove the Uruk-Hai from the Baddies on the page
+  const byeUruk = document.querySelectorAll('.baddy')[2];
+  byeUruk.remove();
+
+
+  //INSTRUCTIONS
   // pop up an alert that the horn of gondor has been blown
   // Boromir's been killed by the Uruk-hai!
   // put a linethrough on boromir's name
@@ -250,11 +270,50 @@ function hornOfGondor() {
 }
 
 function itsDangerousToGoAlone(){
+  console.log('It\'s dangerous to go alone')
+  // select Frodo
+  const braveFrodo = document.querySelectorAll('.hobbit')[0];
+  // select Sam
+  const braveSam = document.querySelectorAll('.hobbit')[3];
+  // add Frodo to Mordor
+  document.querySelector('#mordor').appendChild(braveFrodo);
+  // add Sam to Mordor
+  document.querySelector('#mordor').appendChild(braveSam);
+  // add a div
+  const doomsville = document.createElement('div');
+  // with an id of 'mount-doom' to Mordor
+  doomsville.setAttribute('id', 'mount-doom');
+  // name Mount Doom
+  doomsville.innerHTML = 'Mount Doom';
+  // add mount doom to Mordor
+  document.querySelector('#mordor').appendChild(doomsville);
+
+  //INSTRUCTIONS
   // take Frodo and Sam out of the fellowship and move them to Mordor
   // add a div with an id of 'mount-doom' to Mordor
 }
 
 function weWantsIt() {
+  console.log ('We Wants It');
+  // Create a div
+  const gollumLives = document.createElement('div');
+  // with an id of 'gollum' and add it to Mordor
+  gollumLives.setAttribute('id', 'gollum');
+  //name Gollum
+  gollumLives.innerHTML = 'Gollum';
+  // add gollum to Mordor
+  document.querySelector('#mordor').appendChild(gollumLives);
+  //Remove the ring from Frodo
+  const getTheRing = document.querySelector('#the-ring');
+  //give the ring to Gollum
+  document.querySelector('#gollum').appendChild(getTheRing);
+  //change font color of the ring to red if it is a child of the div with the id of gollum
+  if (gollumLives.hasChildNodes('#gollum')) {
+    document.querySelector('#the-ring').style.color = 'red';
+  }
+
+
+  //INSTRUCTIONS
   // Create a div with an id of 'gollum' and add it to Mordor
   // Remove the ring from Frodo and give it to Gollum
   // Create a condition (Maybe an IF statement) that changes the font-color of the ring div to Red if
@@ -263,10 +322,57 @@ function weWantsIt() {
 }
 
 function thereAndBackAgain() {
+  console.log('There and Back Again');
+  //remove Gollum and the Ring from the DOM
+  document.querySelector('#gollum').remove();
+  //remove all the baddies from the DOM
+  document.querySelector('.badGuys').remove();
+  //Move all the hobbits back to the shire
+  //search for all of the hobbits
+  const goingHome = document.querySelectorAll('.hobbit');
+  //search for the shire
+  const backHome = document.querySelector('#the-shire');
+  //append the hobbits to the shire
+  for (let i=0; i < goingHome.length; i++) {
+  //moving the fellowship hobbits to their new fellowship
+    backHome.appendChild(goingHome[i]);
+  }
+}
+/*
+//create a new div for the fellowship
+  const fellowshipFriends = document.createElement('div');
+  //set the id of the new div to 'the-fellowship'
+  fellowshipFriends.setAttribute('id', 'the-fellowship');
+  //create an h1 within the fellowship of friends
+  const nameOfFellowship = document.createElement('h1');
+  //attach the h1 to the div of Fellowship of Friends
+  fellowshipFriends.appendChild(nameOfFellowship);
+  //add text to the h1
+  nameOfFellowship.innerHTML = 'The Fellowship';
+  //call all the cities where the Fellowship could be
+  const fellowshipCities = document.querySelectorAll('h1');
+  //pick the city and append the empty fellowship to Rivendell
+  fellowshipCities[2].appendChild(fellowshipFriends);
+
+  //select all the hobbits
+  const fellowshipHobbits = document.querySelectorAll('.hobbit');
+  //loop through all the hobbits in the shire to grab them
+  for (let i=0; i < fellowshipHobbits.length; i++) {
+  //moving the fellowship hobbits to their new fellowship
+    fellowshipFriends.appendChild(fellowshipHobbits[i]);
+    //alerts each hobbit joined the party
+    //alert (fellowshipHobbits[i].innerHTML + ' has joined your party');
+
+*/
+
+
+
+
+  //INSTRUCTIONS
   // remove Gollum and the Ring from the DOM
   // remove all the baddies from the DOM
   // Move all the hobbits back to the shire
-}
+
 
 // =================================
 // What to do when the page is ready
